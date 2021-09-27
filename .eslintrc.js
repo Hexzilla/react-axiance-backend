@@ -12,8 +12,9 @@ module.exports = {
     ecmaVersion: 12,
   },
   rules: {
-    "no-async-promise-executor": "off",
-    "no-console": "off",
-    "no-underscore-dangle": "off",
+    'no-async-promise-executor': 'off',
+    'no-console': 'off',
+    'no-underscore-dangle': 'off',
+    'linebreak-style': 'off',
   },
 };
