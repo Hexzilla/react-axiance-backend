@@ -51,7 +51,7 @@ exports.getUserDetails = async (req, res) => {
   console.log(`${APIUrl}/api/${request.type}?request=${request.type}&aff_refid=${request.aff_refid}&project_id=${request.projectId}&timestamp=${request.timeStamp}&hash=${hash}`);
 
   fetch(`${APIUrl}/api/${request.type}?request=${request.type}&aff_refid=${request.aff_refid}&project_id=${request.projectId}&timestamp=${request.timeStamp}&hash=${hash}`, requestOptions)
-  .then(response => { console.log('response', response); response.json(); })
+  .then(response => { console.log('response', response); return response.json(); })
   .then(result => res.status(200).send(result))
   .catch(error => console.log('error', error));
 }
